@@ -24,7 +24,7 @@ public class Maze {
     }
 
     public static boolean canGo(int x, int y){
-        return inRange(x,y) && myMaze[x][y]==0 && visited[x][y]==false;
+        return inRange(x,y) && myMaze[x][y]==0 && !visited[x][y];
     }
 
     public static void dfs(){
@@ -40,11 +40,12 @@ public class Maze {
             boolean isMoved=false;
 
             if (x == 7 && y == 7) {
+                System.out.println("탈출 순서");
                 StringBuilder sb = new StringBuilder();
                 for (int i =0; i<positionArray.size(); i++){
-                    sb.append("(").append(positionArray.get(i).x).append(",").append(positionArray.get(i).y).append(") ");
+                    sb.append("(").append(positionArray.get(i).x).append(",").append(positionArray.get(i).y).append(")");
                     if (i<positionArray.size()-1){
-                        sb.append("-> ");
+                        sb.append("->");
                     }
                 }
                 System.out.println(sb.toString());
