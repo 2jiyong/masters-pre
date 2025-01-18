@@ -5,7 +5,7 @@ public class Car {
     private int carNumber;
 
     public Car(){
-        this.carNumber = ++serialNumber;
+        this.carNumber = serialNumber++;
     }
 
     public int showCarNumber(){
