@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Student {
     private static int serialNumber = 1000;
+
     private String name;
     private int studentId;
     private String major;
@@ -55,11 +56,18 @@ public class Student {
         this.subjects = subjects;
     }
 
-    public void showStudentInfo(){
-        System.out.println("학생 이름: " +this.name+ " 학번: "+this.studentId+" 전공 :"+this.major);
-        for (Subject subject:this.subjects){
-            System.out.print(subject.getSubjectName()+"점수: "+subject.getScore()+" ");
+    public int getTotalScore(){
+        int total = 0;
+        for (Subject subject : subjects) {
+            total += subject.getScore();
         }
-        System.out.println();
+        return total;
+    }
+
+    public void showStudentInfo(){
+
+         System.out.println(this.name+" 학생은 "+this.subjects.size()+"과목을 수강했습니다.");
+         System.out.println("총점은 "+this.getTotalScore()+"점이고 평균은 "+this.getTotalScore()/this.subjects.size()+"점 입니다.");
+
     }
 }
