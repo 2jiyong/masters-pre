@@ -34,8 +34,8 @@ public class Maze {
         int[] dy = {-1,1,0,0};
 
         while(true) {
-            x=positionArray.get(positionArray.size()-1).x;
-            y=positionArray.get(positionArray.size()-1).y;
+            x=positionArray.getLast().x;
+            y=positionArray.getLast().y;
 
             boolean isMoved=false;
 
@@ -48,7 +48,7 @@ public class Maze {
                         sb.append("->");
                     }
                 }
-                System.out.println(sb.toString());
+                System.out.println(sb);
                 return;
             }
 
@@ -63,7 +63,7 @@ public class Maze {
                 }
             }
             if (!isMoved) {
-                positionArray.remove(positionArray.size() - 1);
+                positionArray.removeLast();
             }
         }
     }
