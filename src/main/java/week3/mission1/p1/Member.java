@@ -10,6 +10,7 @@ public class Member {
     protected int parkedHour;
 
     public Member(String name, int usedMoney, int parkedHour){
+        this.name = name;
         this.usedMoney = usedMoney;
         this.parkedHour = parkedHour;
     }

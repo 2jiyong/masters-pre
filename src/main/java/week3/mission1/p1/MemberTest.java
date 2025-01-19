@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MemberTest {
     public static void main(String[] args) {
-        ArrayList<Member> members = new ArrayList<Member>();
+        ArrayList<Member> members = new ArrayList<>();
 
         members.add(new RedMember("James",10000,2));
         members.add(new RedMember("Tomas",30000,2));

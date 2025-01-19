@@ -6,7 +6,6 @@ public class DiamondMember extends Member {
 
     public DiamondMember(String name, int usedMoney, int parkedHour, int agentId) {
         super(name, usedMoney, parkedHour);
-        this.name = name;
         this.membershipGrade = "DIAMOND";
         this.bonusRatio = 0.1;
         this.discountRatio = 0.1;

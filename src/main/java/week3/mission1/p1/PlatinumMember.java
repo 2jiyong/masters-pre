@@ -5,7 +5,6 @@ public class PlatinumMember extends Member {
 
     public PlatinumMember(String name, int usedMoney, int parkedHour) {
         super(name, usedMoney, parkedHour);
-        this.name = name;
         this.membershipGrade = "PLATINUM";
         this.bonusRatio = 0.05;
         this.discountRatio = 0.05;
