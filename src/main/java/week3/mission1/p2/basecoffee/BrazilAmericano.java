@@ -2,10 +2,12 @@ package week3.mission1.p2.basecoffee;
 
 import week3.mission1.p2.Coffee;
 
-public class BrazilAmericano extends Coffee {
-    public BrazilAmericano() {
-        baseCoffee = "Brazil";
+public class BrazilAmericano implements Coffee {
+    @Override
+    public String getBaseCoffee() {
+        return "Brazil";
     }
+
     @Override
     public void brewing() {
         System.out.print("BrazilAmericano ");

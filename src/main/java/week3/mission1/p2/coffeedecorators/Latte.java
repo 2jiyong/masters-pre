@@ -6,9 +6,11 @@ public class Latte extends CoffeeDecorator{
     public Latte(Coffee coffee){
         super(coffee);
     }
+
+    @Override
     public void brewing(){
         coffee.brewing();
-        if (coffee.baseCoffee.equals("Brazil") || coffee.baseCoffee.equals("Etiopia") || coffee.baseCoffee.equals("Hawaii") || coffee.baseCoffee.equals("Kenya")){
+        if (coffee.getBaseCoffee().equals("Brazil") || coffee.getBaseCoffee().equals("Etiopia") || coffee.getBaseCoffee().equals("Hawaii") || coffee.getBaseCoffee().equals("Kenya")){
             System.out.print("Adding Milk ");
         }
 

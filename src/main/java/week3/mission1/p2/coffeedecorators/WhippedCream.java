@@ -10,7 +10,7 @@ public class WhippedCream extends CoffeeDecorator{
     @Override
     public void brewing() {
         coffee.brewing();
-        if (coffee.baseCoffee.equals("Hawaii")) {
+        if (coffee.getBaseCoffee().equals("Hawaii")) {
             System.out.print("Adding Whipped Cream ");
         }
     }

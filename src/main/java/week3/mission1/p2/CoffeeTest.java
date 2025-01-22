@@ -33,5 +33,9 @@ public class CoffeeTest {
         hawaiiWhippedMocha.brewing();
         System.out.println();
 
+        // 잘못된 주문에는 가능한 것만 추가하기
+        Coffee wrongOrder = new Mocha(new WhippedCream(new EtiopiaAmericano()));
+        wrongOrder.brewing();
+        System.out.println();
     }
 }
