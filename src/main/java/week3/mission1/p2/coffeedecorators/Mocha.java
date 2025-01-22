@@ -10,6 +10,8 @@ public class Mocha extends CoffeeDecorator{
     @Override
     public void brewing() {
         coffee.brewing();
-        System.out.print("Adding Mocha Syrup ");
+        if (coffee.baseCoffee.equals("Brazil") || coffee.baseCoffee.equals("Etiopia") || coffee.baseCoffee.equals("Hawaii")){
+            System.out.print("Adding Mocha Syrup ");
+        }
     }
 }

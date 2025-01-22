@@ -8,7 +8,9 @@ public class Latte extends CoffeeDecorator{
     }
     public void brewing(){
         coffee.brewing();
-        System.out.print("Adding Milk");
-    }
+        if (coffee.baseCoffee.equals("Brazil") || coffee.baseCoffee.equals("Etiopia") || coffee.baseCoffee.equals("Hawaii") || coffee.baseCoffee.equals("Kenya")){
+            System.out.print("Adding Milk ");
+        }
 
+    }
 }

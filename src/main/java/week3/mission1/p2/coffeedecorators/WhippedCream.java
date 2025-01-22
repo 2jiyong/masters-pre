@@ -8,8 +8,10 @@ public class WhippedCream extends CoffeeDecorator{
     }
 
     @Override
-    public void brewing(){
+    public void brewing() {
         coffee.brewing();
-        System.out.print("Adding Whipped Cream ");
+        if (coffee.baseCoffee.equals("Hawaii")) {
+            System.out.print("Adding Whipped Cream ");
+        }
     }
 }
