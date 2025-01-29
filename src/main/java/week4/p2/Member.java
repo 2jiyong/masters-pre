@@ -1,7 +1,5 @@
 package week4.p2;
 
-import week4.p2.GRADE;
-
 import java.util.Objects;
 
 public class Member {
