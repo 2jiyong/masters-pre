@@ -30,26 +30,32 @@ public class HeapSort {
         return heapSize;
     }
 
-    public int deleteHeap() {
-        int parent, child;
-        int item, temp;
-        item = items[1];
-        temp = items[heapSize--];
-        parent = 1;
-        child = 2;
+    public void heapify(int index){
+        int largest = index;
+        int left = index * 2;
+        int right = index * 2 + 1;
 
-        while (child <= heapSize) {
-            if ((child < heapSize) && (items[child] < items[child + 1])) {
-                child++;
-            }
-            if (temp >= items[child]) {
-                break;
-            }
-            items[parent] = items[child];
-            parent = child;
-            child *= 2;
+        if (left <= heapSize && items[left] > items[largest]) {
+            largest = left;
         }
-        items[parent] = temp;
-        return item;
+
+        if (right <= heapSize && items[right] > items[largest]) {
+            largest = right;
+        }
+
+        if (largest != index) {
+            int temp = items[index];
+            items[index] = items[largest];
+            items[largest] = temp;
+            heapify(largest);
+        }
+    }
+
+    public int deleteHeap() {
+        int value = items[1];
+        items[1] = items[heapSize];
+        heapSize--;
+        heapify(1);
+        return value;
     }
 }
